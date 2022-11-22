@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/cmp_wrapper"
+	tools:ignore="HardcodedText">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:id="@+id/layout_expense_detail_actions"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="end"
+			android:orientation="horizontal"
+			app:layout_constraintTop_toTopOf="parent">
+
+			<expense.money.octo.views.button.IconButton
+				android:id="@+id/btn_expense_detail_delete"
+				android:layout_width="35dp"
+				android:layout_height="35dp"
+				app:icon="@drawable/ic_delete"
+				app:iconTint="@color/red" />
+
+			<expense.money.octo.views.button.IconButton
+				android:id="@+id/btn_expense_detail_edit_toggle"
+				android:layout_width="35dp"
+				android:layout_height="35dp"
+				android:layout_marginStart="10dp"
+				app:icon="@drawable/ic_edit"
+				app:iconSize="24dp" />
+		</LinearLayout>
+
+		<!--info-->
+		<LinearLayout
+			android:id="@+id/layout_expense_detail_info"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/margin"
+			android:orientation="vertical"
+			app:layout_constraintTop_toBottomOf="@id/layout_expense_detail_actions">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:gravity="center_vertical"
+					android:text="Type"
+					android:textSize="15sp" />
+
+				<TextView
+					android:id="@+id/expense_detail_type"
+					android:layout_width="0dp"
+					android:layout_height="30dp"
+					android:layout_weight="1"
+					android:gravity="center_vertical"
+					android:textSize="15sp" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:gravity="center_vertical"
+					android:text="Currency"
+					android:textSize="15sp" />
+
+				<TextView
+					android:id="@+id/expense_detail_currency"
+					android:layout_width="0dp"
+					android:layout_height="30dp"
+					android:layout_weight="1"
+					android:gravity="center_vertical"
+					android:textSize="15sp" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:gravity="center_vertical"
+					android:text="Amount"
+					android:textSize="15sp" />
+
+				<TextView
+					android:id="@+id/expense_detail_amount"
+					android:layout_width="0dp"
+					android:layout_height="30dp"
+					android:layout_weight="1"
+					android:gravity="center_vertical"
+					android:textSize="15sp" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:gravity="center_vertical"
+					android:text="Date spent"
+					android:textSize="15sp" />
+
+				<TextView
+					android:id="@+id/expense_detail_date_spent"
+					android:layout_width="0dp"
+					android:layout_height="30dp"
+					android:layout_weight="1"
+					android:gravity="center_vertical"
+					android:textSize="15sp" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:gravity="center_vertical"
+					android:text="Created date"
+					android:textSize="15sp" />
+
+				<TextView
+					android:id="@+id/expense_detail_created_date"
+					android:layout_width="0dp"
+					android:layout_height="30dp"
+					android:layout_weight="1"
+					android:gravity="center_vertical"
+					android:textSize="15sp" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:gravity="center_vertical"
+					android:text="Comnent"
+					android:textSize="15sp" />
+
+				<TextView
+					android:id="@+id/expense_detail_comment"
+					android:layout_width="0dp"
+					android:layout_height="30dp"
+					android:layout_weight="1"
+					android:gravity="center_vertical"
+					android:textSize="15sp" />
+			</LinearLayout>
+		</LinearLayout>
+
+		<!-- form -->
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/layout_expense_detail_edit"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/margin"
+			android:visibility="gone"
+			app:layout_constraintTop_toBottomOf="@+id/layout_expense_detail_actions">
+
+			<!-- name amount -->
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/layout_name_amount"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:orientation="horizontal"
+				app:layout_constraintTop_toTopOf="parent">
+
+				<expense.money.octo.views.Input
+					android:id="@+id/text_expense_detail_edit_amount"
+					android:layout_width="0dp"
+					android:layout_height="50dp"
+					android:layout_marginEnd="15dp"
+					android:hint="Amount"
+					android:inputType="number"
+					android:textSize="15sp"
+					app:layout_constraintEnd_toStartOf="@+id/layout_expense_currency"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/layout_expense_currency"
+					style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+					android:layout_width="130dp"
+					android:layout_height="match_parent"
+					app:endIconMode="dropdown_menu"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/layout_name_amount">
+
+					<com.google.android.material.textfield.MaterialAutoCompleteTextView
+						android:id="@+id/dropdown_expense_currency_detail"
+						style="@style/ThemeOverlay.Material3.AutoCompleteTextView"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:backgroundTint="@color/transparent"
+						android:hint="Currency"
+						android:paddingStart="12dp"
+						android:paddingEnd="12dp"
+						android:textSize="15sp" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/layout_expense_type"
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="@dimen/margin"
+				app:endIconMode="dropdown_menu"
+				app:layout_constraintTop_toBottomOf="@+id/layout_name_amount">
+
+				<com.google.android.material.textfield.MaterialAutoCompleteTextView
+					android:id="@+id/dropdown_expense_detail_edit_type"
+					style="@style/ThemeOverlay.Material3.AutoCompleteTextView"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:backgroundTint="@color/transparent"
+					android:hint="Type"
+					android:paddingStart="12dp"
+					android:paddingEnd="12dp"
+					android:textSize="15sp" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<!-- date -->
+			<expense.money.octo.views.Input
+				android:id="@+id/text_expense_detail_edit_date_spent"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:layout_marginTop="@dimen/margin"
+				android:hint="Date spent"
+				android:inputType="time"
+				android:textSize="15sp"
+				app:layout_constraintTop_toBottomOf="@+id/layout_expense_type" />
+
+			<!-- comment -->
+			<expense.money.octo.views.Input
+				android:id="@+id/text_expense_detail_edit_comment"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/margin"
+				android:gravity="top"
+				android:hint="Comment"
+				android:inputType="text|textMultiLine"
+				android:textSize="15sp"
+				app:layout_constraintTop_toBottomOf="@+id/text_expense_detail_edit_date_spent"
+				app:textPaddingVertical="12dp" />
+
+			<!-- action buttons -->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/margin"
+				android:gravity="end"
+				android:orientation="horizontal"
+				app:layout_constraintTop_toBottomOf="@+id/text_expense_detail_edit_comment">
+
+				<expense.money.octo.views.button.Button
+					android:id="@+id/btn_expense_detail_edit_cancel"
+					android:layout_width="wrap_content"
+					android:layout_height="50dp"
+					android:text="@string/label_cancel" />
+
+				<expense.money.octo.views.button.Button
+					android:id="@+id/btn_expense_detail_edit"
+					android:layout_width="wrap_content"
+					android:layout_height="50dp"
+					android:layout_marginStart="40dp"
+					android:text="Update" />
+			</LinearLayout>
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

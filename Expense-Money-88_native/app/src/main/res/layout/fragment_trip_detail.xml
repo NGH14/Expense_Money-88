@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="10dp"
+	tools:context=".ui.trip.TripDetailFragment"
+	tools:ignore="HardcodedText,RtlHardcoded">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="15dp">
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:fontFamily="@font/poppins_semibold"
+			android:text="Trip Information"
+			android:textSize="21sp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<ScrollView
+			android:layout_marginTop="44dp"
+
+			android:id="@+id/layout_linear_detail"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toTopOf="parent">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:baselineAligned="false"
+				android:orientation="vertical"
+				android:paddingTop="10dp"
+				app:layout_constraintTop_toTopOf="parent">
+
+				<!--name-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="Name"
+						android:textColor="?android:textColorHint"
+						android:textSize="15sp" />
+
+					<TextView
+						android:id="@+id/trip_detail_name"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:textSize="15sp" />
+				</LinearLayout>
+
+				<!--destination-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="Destination"
+						android:textColor="?android:textColorHint"
+						android:textSize="15sp" />
+
+					<TextView
+						android:id="@+id/trip_detail_destination"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:textSize="15sp" />
+				</LinearLayout>
+
+				<!--date of trip-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="Date of trip"
+						android:textColor="?android:textColorHint"
+						android:textSize="15sp" />
+
+					<TextView
+						android:id="@+id/trip_detail_date_of_trip"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:textSize="15sp" />
+				</LinearLayout>
+
+				<!--risk assessment required-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="Risk Assessment"
+						android:textColor="?android:textColorHint"
+						android:textSize="15sp" />
+
+					<TextView
+						android:id="@+id/trip_detail_risk_assessment"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:textSize="15sp" />
+				</LinearLayout>
+
+				<!--created date-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="Created Date"
+						android:textColor="?android:textColorHint"
+						android:textSize="15sp" />
+
+					<TextView
+						android:id="@+id/trip_detail_created_date"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:textSize="15sp" />
+				</LinearLayout>
+
+				<!--description-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="Description"
+						android:textColor="?android:textColorHint"
+						android:textSize="15sp" />
+
+					<TextView
+						android:id="@+id/trip_detail_description"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:textSize="15sp" />
+				</LinearLayout>
+			</LinearLayout>
+		</ScrollView>
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_marginTop="25dp"
+			android:background="@drawable/entity_list_bg"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/layout_linear_detail">
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/trip_detail_expense_list_header"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingVertical="2dp"
+				android:paddingRight="15dp"
+				app:layout_constraintTop_toTopOf="parent">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/poppins_semibold"
+					android:text="Expenses"
+					android:textSize="21sp"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<!-- icon button submit expense -->
+				<com.google.android.material.button.MaterialButton
+					android:id="@+id/btn_expense_add"
+					style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+					android:layout_width="30dp"
+					android:layout_height="30dp"
+					android:contentDescription="Submit"
+					app:icon="@drawable/ic_add"
+					app:iconGravity="textStart"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:maxImageSize="36dp" />
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+			<androidx.fragment.app.FragmentContainerView
+				android:id="@+id/list_expenses"
+				android:name="expense.money.octo.ui.expense.list.ExpenseListFragment"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_marginTop="@dimen/margin"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/trip_detail_expense_list_header"
+				tools:layout="@layout/fragment_expense_list" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/cmp_wrapper"
+	tools:context=".ui.trip.TripRegisterConfirmFragment"
+	tools:ignore="HardcodedText">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<TextView
+			android:id="@+id/confirm_header"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:paddingVertical="10dp"
+			android:text="Confirmation"
+			android:textSize="20sp"
+			android:textStyle="bold"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/layout_detail"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+			app:layout_constraintTop_toBottomOf="@+id/confirm_header">
+
+			<!--labels-->
+			<LinearLayout
+				android:id="@+id/layout_detail_label"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingVertical="6dp"
+					android:text="Name"
+					android:textSize="15sp"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingVertical="6dp"
+					android:text="Destination"
+					android:textSize="15sp"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingVertical="6dp"
+					android:text="Date of Trip"
+					android:textSize="15sp"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingVertical="6dp"
+					android:text="Risk Assessment Required"
+					android:textSize="15sp"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingVertical="6dp"
+					android:text="Description"
+					android:textSize="15sp"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+			</LinearLayout>
+
+			<!--values-->
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				app:layout_constraintLeft_toRightOf="@id/layout_detail_label"
+				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintTop_toTopOf="parent">
+
+				<TextView
+					android:id="@+id/trip_register_confirm_name"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingVertical="6dp"
+					android:textSize="15sp"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<TextView
+					android:id="@+id/trip_register_confirm_destination"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingVertical="6dp"
+					android:textSize="15sp"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<TextView
+					android:id="@+id/trip_register_confirm_date_of_trip"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingVertical="6dp"
+					android:textSize="15sp"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<TextView
+					android:id="@+id/trip_register_confirm_risk_management_required"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingVertical="6dp"
+					android:textSize="15sp"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<TextView
+					android:id="@+id/trip_register_confirm_description"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingVertical="6dp"
+					android:textSize="15sp"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+			</LinearLayout>
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:layout_marginTop="20dp"
+			android:gravity="center"
+			android:orientation="horizontal"
+			app:layout_constraintTop_toBottomOf="@+id/layout_detail">
+
+			<expense.money.octo.views.button.Button
+				android:id="@+id/tripRegisterConfirmButtonCancel"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:text="@string/label_cancel" />
+
+			<expense.money.octo.views.button.Button
+				android:id="@+id/tripRegisterConfirmButtonConfirm"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_marginStart="40dp"
+				android:text="Confirm" />
+		</LinearLayout>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

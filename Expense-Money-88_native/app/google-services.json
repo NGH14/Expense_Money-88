@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "434855834167",
+    "project_id": "money-expense-88",
+    "storage_bucket": "money-expense-88.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434855834167:android:e0e1503f839b98e77445b2",
+        "android_client_info": {
+          "package_name": "expense.money.octo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434855834167-odimtmufv8n66nc5j9bbeckuf9gn0g9p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiJTnZaV2OPTgZFluoNT0CF7gETFU78fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434855834167-odimtmufv8n66nc5j9bbeckuf9gn0g9p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/layout_main_expense_detail"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/cmp_wrapper"
+	tools:context=".ui.expense.ExpenseCreateFragment"
+	tools:ignore="HardcodedText">
+
+	<!-- form -->
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<!-- name amount -->
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/layout_name_amount"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:orientation="horizontal"
+			app:layout_constraintTop_toTopOf="parent">
+
+			<expense.money.octo.views.Input
+				android:id="@+id/text_expense_amount"
+				android:layout_width="0dp"
+				android:layout_height="50dp"
+				android:layout_marginEnd="15dp"
+				app:layout_constraintEnd_toStartOf="@+id/layout_expense_currency"
+				android:hint="Amount"
+				android:inputType="number"
+				android:textSize="15sp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/layout_expense_currency"
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+				android:layout_width="130dp"
+				android:layout_height="match_parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:endIconMode="dropdown_menu"
+				app:layout_constraintTop_toBottomOf="@+id/layout_name_amount">
+
+				<com.google.android.material.textfield.MaterialAutoCompleteTextView
+					android:id="@+id/dropdown_expense_currency"
+					style="@style/ThemeOverlay.Material3.AutoCompleteTextView"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:backgroundTint="@color/transparent"
+					android:hint="Currency"
+					android:paddingStart="12dp"
+					android:paddingEnd="12dp"
+					android:textSize="15sp" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/layout_expense_type"
+			style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginTop="@dimen/margin"
+			app:endIconMode="dropdown_menu"
+
+			app:layout_constraintTop_toBottomOf="@+id/layout_name_amount">
+
+			<com.google.android.material.textfield.MaterialAutoCompleteTextView
+				android:id="@+id/dropdown_expense_type"
+				style="@style/ThemeOverlay.Material3.AutoCompleteTextView"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:backgroundTint="@color/transparent"
+				android:hint="Type"
+				android:paddingStart="12dp"
+				android:paddingEnd="12dp"
+				android:textSize="15sp" />
+		</com.google.android.material.textfield.TextInputLayout>
+		<!-- date -->
+		<expense.money.octo.views.Input
+			android:id="@+id/text_expense_date"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:layout_marginTop="@dimen/margin"
+			android:hint="@string/label_date"
+			android:inputType="time"
+			android:textSize="15sp"
+			app:layout_constraintTop_toBottomOf="@+id/layout_expense_type" />
+
+		<!-- comment -->
+		<expense.money.octo.views.Input
+			android:id="@+id/text_expense_comment"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/margin"
+			android:gravity="top"
+			android:hint="Comment"
+			android:inputType="text|textMultiLine"
+			android:textSize="15sp"
+			app:layout_constraintTop_toBottomOf="@+id/text_expense_date"
+			app:textPaddingVertical="12dp" />
+
+		<!-- action buttons -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/margin"
+			android:gravity="end"
+			android:orientation="horizontal"
+			app:layout_constraintTop_toBottomOf="@+id/text_expense_comment">
+
+			<expense.money.octo.views.button.Button
+				android:id="@+id/btn_expense_create_cancel"
+				android:layout_width="wrap_content"
+				android:layout_height="50dp"
+				android:text="@string/label_cancel" />
+
+			<expense.money.octo.views.button.Button
+				android:id="@+id/btn_expense_create"
+				android:layout_width="wrap_content"
+				android:layout_height="50dp"
+				android:layout_marginStart="40dp"
+				android:text="Add" />
+		</LinearLayout>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

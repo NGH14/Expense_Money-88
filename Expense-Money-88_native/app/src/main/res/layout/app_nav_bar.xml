@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:ignore="HardcodedText">
+
+	<com.google.android.material.bottomappbar.BottomAppBar
+		android:id="@+id/navbar_bottom"
+		android:layout_width="match_parent"
+		android:layout_height="60dp"
+		android:layout_gravity="bottom"
+		app:contentInsetStart="0dp"
+		app:fabCradleMargin="8dp"
+		app:fabCradleRoundedCornerRadius="50dp">
+
+		<com.google.android.material.bottomnavigation.BottomNavigationView
+			android:id="@+id/navbar_nav_view"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@android:color/transparent"
+			app:elevation="0dp"
+			app:labelVisibilityMode="unlabeled"
+			app:menu="@menu/menu_main" />
+	</com.google.android.material.bottomappbar.BottomAppBar>
+
+	<com.google.android.material.floatingactionbutton.FloatingActionButton
+		android:id="@+id/navbar_center_btn"
+		style="@style/ExpenseMoney88.Button.CenterAction"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:contentDescription="add trip"
+		android:src="@drawable/ic_add"
+		app:layout_anchor="@id/navbar_bottom"
+		app:maxImageSize="40dp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

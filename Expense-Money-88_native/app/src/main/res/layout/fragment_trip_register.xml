@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".ui.trip.TripRegisterFragment"
+	tools:ignore="HardcodedText">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/cmp_wrapper">
+
+		<!-- form -->
+		<LinearLayout
+			android:id="@+id/register_form"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			app:layout_constraintTop_toTopOf="parent">
+
+			<expense.money.octo.views.Input
+				android:id="@+id/input_trip_register_name"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:hint="@string/label_name"
+				android:textSize="15sp" />
+
+			<expense.money.octo.views.Input
+				android:id="@+id/input_trip_register_destination"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:layout_marginTop="15dp"
+				android:hint="Destination"
+				android:textSize="15sp" />
+
+			<expense.money.octo.views.Input
+				android:id="@+id/input_trip_register_date_of_trip"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:layout_marginTop="15dp"
+				android:autofillHints=""
+				android:hint="Date of trip"
+				android:textSize="15sp" />
+
+			<expense.money.octo.views.Input
+				android:id="@+id/input_trip_register_description"
+				android:layout_width="match_parent"
+				android:layout_height="150dp"
+				android:layout_marginTop="15dp"
+				android:autofillHints=""
+				android:gravity="top"
+				android:hint="Description"
+				android:inputType="textMultiLine"
+				android:textSize="15sp"
+				app:textPaddingVertical="10dp" />
+
+			<com.google.android.material.switchmaterial.SwitchMaterial
+				android:id="@+id/input_trip_register_risk_assessment_required"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:paddingHorizontal="10dp"
+				android:text="Risk assessment "
+				android:textSize="15sp" />
+		</LinearLayout>
+
+		<ListView
+			android:id="@+id/listview_trip_register_errors"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:autofillHints=""
+			android:clickable="false"
+			android:padding="5dp"
+			android:textSize="11sp"
+			android:visibility="gone"
+			app:flow_wrapMode="aligned"
+			app:layout_constraintTop_toBottomOf="@+id/register_form" />
+
+		<expense.money.octo.views.button.Button
+			android:id="@+id/trip_register_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:backgroundTint="@color/purple_500"
+			android:text="@string/label_register"
+			android:textColor="@color/white"
+			android:textSize="15sp"
+			android:layout_marginTop="5dp"
+
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/listview_trip_register_errors" />
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,86 @@
+.nav_bar {
+    width:92vw;
+    height: 70px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(51, 51, 51, .4);
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 0 15px;
+    position: fixed;
+    bottom: 0;
+    
+  }
+  .nav_bar-els-wrap {
+    display: flex;
+    align-items: center;
+    width: 33px;
+    background-size: 1200px;
+    background-position: 100% 50%;
+    color: #333;
+    padding: 0 9px;
+    border-radius: 100px;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    transition: width 200ms, padding 200ms, border-radius 200ms, background-position 200ms;
+    transition-timing-function: ease-in-out;
+  }
+
+  .nav_bar-els-wrap .icon {
+    font-size: 22px;
+    margin-right: 25px;
+    position: relative;
+    color: #999;
+    z-index: 2;
+    transition: font-size 250ms, margin-right 200ms;
+    transition-timing-function: ease-out;
+  }
+  .nav_bar-els-wrap .label {
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: white;
+    opacity: 0;
+    position: relative;
+    z-index: 2;
+    font-size: 13px;
+    transition: opacity 400ms;
+    transition-delay: 130ms;
+    transition-timing-function: ease-out;
+  }
+  
+   .navbar_active {
+    width: 83px;
+    text-align: center;
+    background-position: 0 50%;
+    padding: 3px 15px;
+    border-radius: 50px;
+    background-image: radial-gradient(circle at right, #fff, #333);
+
+  }
+   .navbar_active .icon
+   {
+    color: white;
+    font-size: 22px !important;
+    margin-right: 10px;
+  }
+   .navbar_active .label {
+    opacity: 1;
+  }
+
+/* 
+  .el-1 {
+    background-image: radial-gradient(circle at right, #fff, #333);
+  }
+  .el-2 {
+    background-image: radial-gradient(circle at right, #fff, #333);
+  }
+  .el-3 {
+    background-image: radial-gradient(circle at right, #fff, rgb(255,236,216));
+  }
+  .el-4 {
+    background-image: radial-gradient(circle at right, #fff, rgb(255,255,216));
+  } */

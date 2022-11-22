@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<attr name="appBackground" format="reference|color" />
+	<attr name="appViewButtonStyle" format="reference" />
+	<attr name="appViewIconButtonStyle" format="reference" />
+	<attr name="text" format="string" />
+
+	<!-- input -->
+	<declare-styleable name="Input">
+		<attr name="text" />
+		<attr name="android:hint" />
+		<attr name="endIconMode" />
+		<attr name="endIconDrawable" />
+		<attr name="placeholderText" />
+		<attr name="android:textSize" />
+		<attr name="inputHeight" format="dimension" />
+		<attr name="android:inputType" />
+		<attr name="android:gravity" />
+		<attr name="textPadding" format="dimension" />
+		<attr name="textPaddingHorizontal" format="dimension" />
+		<attr name="textPaddingVertical" format="dimension" />
+
+	</declare-styleable>
+
+</resources>
